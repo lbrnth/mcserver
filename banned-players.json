@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "uuid": "aff13d23-3307-3dee-81ad-3f06af7ccc7a",
+    "name": "_Bazinga_",
+    "created": "2020-10-20 11:15:41 +0000",
+    "source": "lbrnth",
+    "expires": "forever",
+    "reason": "Banned by an operator."
+  }
+]

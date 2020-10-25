@@ -1,0 +1,247 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 10/21/20, 8:12 PM
+Description: Watching Server
+
+java.lang.Error
+	at app//ddb$$Lambda$3243/0x00000008012e5040.get$Lambda(Unknown Source)
+	at java.base@14.0.1/java.lang.invoke.LambdaForm$DMH/0x00000008012e5440.invokeStatic(LambdaForm$DMH)
+	at java.base@14.0.1/java.lang.invoke.LambdaForm$MH/0x00000008012e4c40.linkToTargetMethod(LambdaForm$MH)
+	at app//ddb.a(SourceFile:188)
+	at app//ddb$$Lambda$3242/0x00000008012e6c40.merge(Unknown Source)
+	at app//dcx.a(SourceFile:57)
+	at app//ddb.a(SourceFile:187)
+	at app//ddb$$Lambda$3241/0x00000008012e7440.merge(Unknown Source)
+	at app//dcx.a(SourceFile:57)
+	at app//ddb.a(SourceFile:186)
+	at app//ddb.c(SourceFile:182)
+	at app//apx.g(SourceFile:809)
+	at app//apx.a(SourceFile:590)
+	at app//aqj.a(SourceFile:2145)
+	at app//aqj.g(SourceFile:2098)
+	at app//aqj.k(SourceFile:2547)
+	at app//aqk.k(SourceFile:542)
+	at app//apv.k(SourceFile:127)
+	at app//azw.k(SourceFile:54)
+	at app//bap.k(SourceFile:138)
+	at app//aqj.j(SourceFile:2254)
+	at app//aqk.j(SourceFile:342)
+	at app//aag.a(SourceFile:616)
+	at app//aag$$Lambda$3556/0x00000008013f4440.accept(Unknown Source)
+	at app//bru.a(SourceFile:561)
+	at app//aag.a(SourceFile:406)
+	at app//net.minecraft.server.MinecraftServer.b(SourceFile:868)
+	at app//zg.b(SourceFile:303)
+	at app//net.minecraft.server.MinecraftServer.a(SourceFile:808)
+	at app//net.minecraft.server.MinecraftServer.w(SourceFile:667)
+	at app//net.minecraft.server.MinecraftServer.a(SourceFile:254)
+	at app//net.minecraft.server.MinecraftServer$$Lambda$3317/0x000000080130e840.run(Unknown Source)
+	at java.base@14.0.1/java.lang.Thread.run(Thread.java:832)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at app//ddb$$Lambda$3243/0x00000008012e5040.get$Lambda(Unknown Source)
+	at java.base@14.0.1/java.lang.invoke.LambdaForm$DMH/0x00000008012e5440.invokeStatic(LambdaForm$DMH)
+	at java.base@14.0.1/java.lang.invoke.LambdaForm$MH/0x00000008012e4c40.linkToTargetMethod(LambdaForm$MH)
+	at app//ddb.a(SourceFile:188)
+	at app//ddb$$Lambda$3242/0x00000008012e6c40.merge(Unknown Source)
+	at app//dcx.a(SourceFile:57)
+	at app//ddb.a(SourceFile:187)
+	at app//ddb$$Lambda$3241/0x00000008012e7440.merge(Unknown Source)
+	at app//dcx.a(SourceFile:57)
+	at app//ddb.a(SourceFile:186)
+	at app//ddb.c(SourceFile:182)
+	at app//apx.g(SourceFile:809)
+	at app//apx.a(SourceFile:590)
+	at app//aqj.a(SourceFile:2145)
+	at app//aqj.g(SourceFile:2098)
+	at app//aqj.k(SourceFile:2547)
+	at app//aqk.k(SourceFile:542)
+	at app//apv.k(SourceFile:127)
+	at app//azw.k(SourceFile:54)
+	at app//bap.k(SourceFile:138)
+	at app//aqj.j(SourceFile:2254)
+	at app//aqk.j(SourceFile:342)
+	at app//aag.a(SourceFile:616)
+	at app//aag$$Lambda$3556/0x00000008013f4440.accept(Unknown Source)
+	at app//bru.a(SourceFile:561)
+	at app//aag.a(SourceFile:406)
+	at app//net.minecraft.server.MinecraftServer.b(SourceFile:868)
+	at app//zg.b(SourceFile:303)
+	at app//net.minecraft.server.MinecraftServer.a(SourceFile:808)
+	at app//net.minecraft.server.MinecraftServer.w(SourceFile:667)
+	at app//net.minecraft.server.MinecraftServer.a(SourceFile:254)
+
+-- Thread Dump --
+Details:
+	Threads: "Reference Handler" daemon prio=10 Id=2 RUNNABLE
+	at java.base@14.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@14.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+	at java.base@14.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+
+"Finalizer" daemon prio=8 Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@37b13d9
+	at java.base@14.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@37b13d9
+	at java.base@14.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@14.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.base@14.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+
+"Signal Dispatcher" daemon prio=9 Id=4 RUNNABLE
+	at java.base@14.0.1/java.lang.ThreadGroup.addUnstarted(ThreadGroup.java:862)
+	-  locked java.lang.ThreadGroup@28e0d0bd
+	at java.base@14.0.1/java.lang.Thread.<init>(Thread.java:433)
+	at java.base@14.0.1/java.lang.Thread.<init>(Thread.java:763)
+	at java.base@14.0.1/jdk.internal.misc.Signal.dispatch(Signal.java:224)
+
+
+"Notification Thread" daemon prio=9 Id=9 RUNNABLE
+
+
+"Common-Cleaner" daemon prio=8 Id=10 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@31cd7848
+	at java.base@14.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@31cd7848
+	at java.base@14.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@14.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+	at java.base@14.0.1/java.lang.Thread.run(Thread.java:832)
+	at java.base@14.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+
+"Worker-Bootstrap-1" daemon prio=5 Id=14 WAITING on java.util.concurrent.ForkJoinPool@ed9329f
+	at java.base@14.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@ed9329f
+	at java.base@14.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:211)
+	at java.base@14.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1633)
+	at java.base@14.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Timer hack thread" daemon prio=5 Id=15 TIMED_WAITING
+	at java.base@14.0.1/java.lang.Thread.sleep(Native Method)
+	at app//x$6.run(SourceFile:636)
+
+
+"Worker-Main-2" daemon prio=5 Id=16 WAITING on java.util.concurrent.ForkJoinPool@47afc99c
+	at java.base@14.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@47afc99c
+	at java.base@14.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:211)
+	at java.base@14.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1633)
+	at java.base@14.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Snooper Timer" daemon prio=5 Id=18 WAITING on java.util.TaskQueue@69e48cec
+	at java.base@14.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@69e48cec
+	at java.base@14.0.1/java.lang.Object.wait(Object.java:321)
+	at java.base@14.0.1/java.util.TimerThread.mainLoop(Timer.java:527)
+	at java.base@14.0.1/java.util.TimerThread.run(Timer.java:506)
+
+
+"Server thread" prio=5 Id=17 RUNNABLE
+	at app//ddb$$Lambda$3243/0x00000008012e5040.get$Lambda(Unknown Source)
+	at java.base@14.0.1/java.lang.invoke.LambdaForm$DMH/0x00000008012e5440.invokeStatic(LambdaForm$DMH)
+	at java.base@14.0.1/java.lang.invoke.LambdaForm$MH/0x00000008012e4c40.linkToTargetMethod(LambdaForm$MH)
+	at app//ddb.a(SourceFile:188)
+	at app//ddb$$Lambda$3242/0x00000008012e6c40.merge(Unknown Source)
+	at app//dcx.a(SourceFile:57)
+	at app//ddb.a(SourceFile:187)
+	at app//ddb$$Lambda$3241/0x00000008012e7440.merge(Unknown Source)
+	...
+
+
+"DestroyJavaVM" prio=5 Id=20 RUNNABLE
+
+
+"ObjectCleanerThread" daemon prio=1 Id=22 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@3331a6a0
+	at java.base@14.0.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@3331a6a0
+	at java.base@14.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at app//io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:54)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@14.0.1/java.lang.Thread.run(Thread.java:832)
+
+
+"Netty Epoll Server IO #0" daemon prio=5 Id=23 RUNNABLE
+	at java.base@14.0.1/java.util.Arrays.copyOf(Arrays.java:3536)
+	at java.base@14.0.1/java.lang.AbstractStringBuilder.ensureCapacityInternal(AbstractStringBuilder.java:227)
+	at java.base@14.0.1/java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:688)
+	at java.base@14.0.1/java.lang.StringBuffer.append(StringBuffer.java:387)
+	-  locked java.lang.StringBuffer@743b2793
+	at java.base@14.0.1/java.io.StringWriter.write(StringWriter.java:122)
+	at app//com.google.gson.stream.JsonWriter.string(JsonWriter.java:591)
+	at app//com.google.gson.stream.JsonWriter.value(JsonWriter.java:419)
+	at app//com.google.gson.internal.bind.TypeAdapters$29.write(TypeAdapters.java:762)
+	...
+
+
+"Server Watchdog" daemon prio=5 Id=28 RUNNABLE
+	at java.management@14.0.1/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@14.0.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:521)
+	at java.management@14.0.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:509)
+	at app//zj.run(SourceFile:45)
+	at java.base@14.0.1/java.lang.Thread.run(Thread.java:832)
+
+
+"Netty Epoll Server IO #1" daemon prio=5 Id=29 RUNNABLE
+	at java.base@14.0.1/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1019)
+	at java.base@14.0.1/java.util.concurrent.ConcurrentHashMap.putIfAbsent(ConcurrentHashMap.java:1541)
+	at app//io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:111)
+	at app//io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:105)
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:637)
+	at app//io.netty.channel.DefaultChannelPipeline.access$000(DefaultChannelPipeline.java:46)
+	at app//io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1487)
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1161)
+	...
+
+
+"Netty Epoll Server IO #2" daemon prio=5 Id=30 RUNNABLE
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1146)
+	-  locked io.netty.channel.DefaultChannelPipeline@4d61e3a1
+	at app//io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:686)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:510)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:482)
+	at app//io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:313)
+	...
+
+
+"Netty Epoll Server IO #3" daemon prio=5 Id=38 RUNNABLE
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1146)
+	-  locked io.netty.channel.DefaultChannelPipeline@2f950d
+	at app//io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:686)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:510)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:482)
+	at app//io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:313)
+	...
+
+
+
+Stacktrace:
+	at zj.run(SourceFile:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.3
+	Minecraft Version ID: 1.16.3
+	Operating System: Linux (amd64) version 5.4.0-52-generic
+	Java Version: 14.0.1, Private Build
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Private Build
+	Memory: 342636544 bytes (326 MB) / 1033895936 bytes (986 MB) up to 1033895936 bytes (986 MB)
+	CPUs: 2
+	JVM Flags: 0 total; 
+	Player Count: 3 / 20; [aah['HellyGurevich'/21645, l='ServerLevel[world]', x=-548.97, y=64.00, z=955.04], aah['OnlyUseButterAxe'/21731, l='ServerLevel[world]', x=-355.50, y=66.12, z=546.84], aah['ArianBear'/109, l='ServerLevel[world]', x=-22.70, y=62.32, z=756.70]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

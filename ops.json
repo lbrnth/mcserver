@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "uuid": "9b311c83-16a3-3570-a9e9-65f604f2e6c0",
+    "name": "lbrnth",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "fe0676cf-814f-3727-b64f-6389ec4b1326",
+    "name": "ArianBear",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "db6d278d-e13a-389f-8c93-b4d2550b5a87",
+    "name": "OnlyUseButterAxe",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]
